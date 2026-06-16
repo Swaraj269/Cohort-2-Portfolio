@@ -1,7 +1,17 @@
+"use client";
+
+import InfiniteCarousel from "@/components/InfiniteCarousel";
+import TextReveal from "@/components/TextReveal";
+import { projects } from "@/data/projects";
+import { useRef } from "react";
+
+
 export default function Home() {
+  
+
   return (
-    <main className="h-[300vh] w-full">
-      <h1 className="text-[16rem]" >Helloo Everyone </h1>
+    <main className="h-screen flex items-center w-full">
+      <InfiniteCarousel projects={projects} />
     </main>
   );
 }
