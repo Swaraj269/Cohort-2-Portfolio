@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import CarouselCard from "./CarouselCard";
 import gsap from "@/libs/gsap";
 
-const CARD_W = 300;
-const CARD_H = 380;
+const CARD_W = 400;
+const CARD_H = 520;
 const SCALE = 1.35;
-const CARD_GAP = 20;
+const CARD_GAP = 27;
 
 const DURATION = 25;
 
@@ -16,7 +16,7 @@ const InfiniteCarousel = ({ projects }) => {
   const tweenRef = useRef(null);
 
   useEffect(() => {
-    const singleWidth = projects.length * (CARD_H + CARD_GAP);
+    const singleWidth = projects.length * (CARD_W + CARD_GAP);
 
     tweenRef.current = gsap.to(trackRef.current, {
       x: -singleWidth,
@@ -33,7 +33,7 @@ const InfiniteCarousel = ({ projects }) => {
   return (
     <div
       style={{
-        padding: `${TRACK_H * 1.2}px 0 24px`,
+        padding: `${TRACK_H * 0.5}px 0 24px`,
       }}
       className="overflow-hidden"
     >
